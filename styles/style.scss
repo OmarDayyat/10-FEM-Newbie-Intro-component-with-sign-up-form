@@ -78,6 +78,9 @@ p{
     span{
       color: $Grayish-Blue;
     }
+    &:hover{
+      opacity: 0.9;
+    }
   }
 
   .input-section{
@@ -127,6 +130,7 @@ p{
   }
 
   .form-btn{
+    cursor: pointer;
     background-color: $Green;
     border-radius: 5px;
     padding: 15px;
@@ -135,6 +139,9 @@ p{
     text-transform: uppercase;
     box-shadow: 0 3px 0px hsla(0, 0%, 0%,0.4);
     margin-bottom: 20px;
+    &:hover{
+      opacity: 0.7;
+    }
 
   }
 
@@ -144,6 +151,9 @@ p{
       text-align: center;
       span{
         color: $Red;
+        &:hover{
+          cursor: pointer;
+        }
       }
   }
 
@@ -167,5 +177,68 @@ p{
 
 @media only screen and (max-width:1024px){
 
-  
+  /*==============
+  General
+  ==============*/
+
+html{
+background: url("../images/bg-intro-mobile.png");
+background-color: $Red;
+}
+
+h1{
+font-size: 2.3rem;
+}
+
+
+
+/*==============
+Main Container
+==============*/
+
+.main-container{
+flex-direction: column;
+width: 100%;
+position: relative;
+top: 5%;
+transform: translatey(0%);
+padding: 40px 0;
+}
+
+/*==============
+Info Container
+==============*/
+
+.info-container{
+width: 90%;
+text-align: center;
+margin-bottom: 80px;
+}
+
+/*==============
+Input Container
+==============*/
+
+.input-container{
+  flex-direction: column;
+  width: 90%;
+  margin-left: 0px;
+}
+
+/*==============
+Attribution
+==============*/
+
+.attribution {
+font-size: 11px;
+text-align: center;
+position: relative;
+top: 135%;
+right: 0;
+left: 0;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+ 
 }

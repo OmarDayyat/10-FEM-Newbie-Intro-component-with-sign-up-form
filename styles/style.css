@@ -88,6 +88,10 @@ p {
   color: #b9b6d3;
 }
 
+.try-btn:hover {
+  opacity: 0.9;
+}
+
 .input-section {
   position: relative;
 }
@@ -153,6 +157,7 @@ input:focus {
 }
 
 .form-btn {
+  cursor: pointer;
   background-color: #38cc8c;
   border-radius: 5px;
   padding: 15px;
@@ -164,6 +169,10 @@ input:focus {
   margin-bottom: 20px;
 }
 
+.form-btn:hover {
+  opacity: 0.7;
+}
+
 .terms-container {
   color: #b9b6d3;
   font-size: 0.7rem;
@@ -172,6 +181,10 @@ input:focus {
 
 .terms-container span {
   color: #ff7a7a;
+}
+
+.terms-container span:hover {
+  cursor: pointer;
 }
 
 /*==============
@@ -189,5 +202,66 @@ input:focus {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media only screen and (max-width: 1024px) {
+  /*==============
+  General
+  ==============*/
+  html {
+    background: url("../images/bg-intro-mobile.png");
+    background-color: #ff7a7a;
+  }
+  h1 {
+    font-size: 2.3rem;
+  }
+  /*==============
+Main Container
+==============*/
+  .main-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: 5%;
+    -webkit-transform: translatey(0%);
+            transform: translatey(0%);
+    padding: 40px 0;
+  }
+  /*==============
+Info Container
+==============*/
+  .info-container {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  /*==============
+Input Container
+==============*/
+  .input-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    margin-left: 0px;
+  }
+  /*==============
+Attribution
+==============*/
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+    top: 135%;
+    right: 0;
+    left: 0;
+  }
+  .attribution a {
+    color: #3e52a3;
+  }
 }
 /*# sourceMappingURL=style.css.map */
