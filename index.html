@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="./styles/style.css">
 
-    <script type="text/javascript" src="./javaScript/script.js"></script>
+    <script type="text/javascript" src="./javaScript/script.js" defer></script>
 
     <title>Frontend Mentor | Intro component with sign up form</title>
 
@@ -24,7 +24,7 @@
         </div>
         <div class="input-container">
           <a class="try-btn" href="#">Try it free 7 days<span> then $20/mo. thereafter</span> </a>
-          <form action="/" method="GET">
+          <form id="form" action="/" method="GET">
             <section class="form-container">
               <div class="input-section">
                 <input name="firstName" id="firstName" type="text" placeholder="First Name" />

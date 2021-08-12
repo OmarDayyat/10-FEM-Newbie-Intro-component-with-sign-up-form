@@ -118,6 +118,7 @@ p{
     position: absolute;
     right: 3%;
     top: 30%;
+    display: none;
   }
 
   .error-msg{
@@ -127,6 +128,7 @@ p{
     font-size: 0.7rem;
     transform: translateY(-50%);
     font-style: italic;
+    display: none;
   }
 
   .form-btn{
