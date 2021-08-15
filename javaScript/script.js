@@ -19,69 +19,45 @@ function displayNone(element) {
   element.style.display = "none";
 }
 
+function required(fieldName, errorMsgText, i) {
+
+  if (fieldName == email && email, email.value !== "" && email.value !== null) {
+    if (!email.value.match(emailRegex) && email.value !== "" && email.value != null) {
+      email.style.borderColor = "red";
+      displayBlock(errorMsg[2]);
+      displayBlock(errorImage[2]);
+      errorMsg[2].innerText = "Please provide a valid email";
+    }
+    if (email.value.match(emailRegex) && email.value !== "") {
+      email.style.borderColor = "green";
+      displayNone(errorMsg[2]);
+      displayNone(errorImage[2]);
+      errorMsg[2].innerText = "";
+    }
+  }
+  else {
+    if (fieldName.value === "" || fieldName.value == null) {
+      fieldName.style.borderColor = "red";
+      displayBlock(errorMsg[i]);
+      displayBlock(errorImage[i]);
+      errorMsg[i].innerText = errorMsgText;
+    }
+    else {
+      fieldName.style.borderColor = "green";
+      displayNone(errorMsg[i]);
+      displayNone(errorImage[i]);
+      errorMsg[i].innerText = "";
+    }
+  }
+}
+
 form.addEventListener('submit', (e) => {
 
   e.preventDefault();
 
-
-  if (fName.value === "" || fName.value == null) {
-    fName.style.borderColor = "red";
-    displayBlock(errorMsg[0]);
-    displayBlock(errorImage[0]);
-    errorMsg[0].innerText = "First Name can't be empty";
-  }
-  else {
-    fName.style.borderColor = "green";
-    displayNone(errorMsg[0]);
-    displayNone(errorImage[0]);
-    errorMsg[0].innerText = "";
-  }
-
-  if (lName.value === "" || lName.value == null) {
-    lName.style.borderColor = "red";
-    displayBlock(errorMsg[1]);
-    displayBlock(errorImage[1]);
-    errorMsg[1].innerText = "Last Name can't be empty";
-  }
-  else {
-    lName.style.borderColor = "green";
-    displayNone(errorMsg[1]);
-    displayNone(errorImage[1]);
-    errorMsg[0].innerText = "";
-  }
-
-  if (email.value === "" || email.value == null) {
-    email.style.borderColor = "red";
-    displayBlock(errorMsg[2]);
-    displayBlock(errorImage[2]);
-    errorMsg[2].innerText = "Email can't be empty";
-  }
-
-
-  if (!email.value.match(emailRegex) && email.value !== "" && email.value != null) {
-    email.style.borderColor = "red";
-    displayBlock(errorMsg[2]);
-    displayBlock(errorImage[2]);
-    errorMsg[2].innerText = "Please provide a valid email";
-  }
-  if (email.value.match(emailRegex) && email.value !== "") {
-    email.style.borderColor = "green";
-    displayNone(errorMsg[2]);
-    displayNone(errorImage[2]);
-    errorMsg[0].innerText = "";
-  }
-
-  if (pass.value === "" || pass.value == null) {
-    pass.style.borderColor = "red";
-    displayBlock(errorMsg[3]);
-    displayBlock(errorImage[3]);
-    errorMsg[3].innerText = "Password can't be empty";
-  }
-  else {
-    pass.style.borderColor = "green";
-    displayNone(errorMsg[3]);
-    displayNone(errorImage[3]);
-    errorMsg[0].innerText = "";
-  }
+  required(fName, "First name can't be empty", 0);
+  required(lName, "Last name can't be empty", 1);
+  required(email, "Email name can't be empty", 2);
+  required(pass, "Password can't be empty", 3);
 
 })
